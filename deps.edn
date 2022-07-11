@@ -1,0 +1,17 @@
+{:paths ["src" "resources"]
+ :deps  {org.clojure/clojure           {:mvn/version "1.10.3"}
+         com.taoensso/timbre           {:mvn/version "5.0.0"}
+         com.datomic/dev-local         {:mvn/version "1.0.242"}
+         com.datomic/client-cloud      {:mvn/version "1.0.120"}
+         org.clojure/tools.trace       {:mvn/version "0.7.11"}
+         com.amazonaws/aws-java-sdk-s3 {:mvn/version "1.11.826"}}
+ :mvn/repos {"cognitect-dev-tools" {:url "https://dev-tools.cognitect.com/maven/releases/"}}
+ :aliases
+ {:run-m {:main-opts ["-m" "cbs.import-cloud"]
+          :jvm-opts  ["-XX:-OmitStackTraceInFastThrow"]}
+  :uberjar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.267"}}
+            :exec-fn      hf.depstar/uberjar
+            :exec-args    {:aot        true
+                           :jar        "import-cloud.jar"
+                           :main-class "cbs.import-cloud"
+                           :sync-pom   true}}}}

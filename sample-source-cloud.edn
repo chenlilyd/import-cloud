@@ -1,0 +1,6 @@
+{:server-type :cloud
+ :region      "region"
+ :db-name     "cloud-db-name"
+ :system      "cloud-system-name"
+ :query-group "cloud-query-group"
+ :endpoint    "aws-https-endpoint"}

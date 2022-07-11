@@ -1,0 +1,4 @@
+{:server-type :dev-local
+ :storage-dir "absolute-path-to-local-directory"
+ :db-name     "any-local-db-name"
+ :system      "any-local-system"}
