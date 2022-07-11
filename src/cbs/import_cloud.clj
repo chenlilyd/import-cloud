@@ -10,8 +10,7 @@
   (dl/import-cloud {:source source :dest target}))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [f-source f-target]
   (if (not f-target)
-    (prn "Please specify two paths to source/target edn files")
+    (prn "Please specify source and target edn file paths")
     (import-cloud (unsafe-read f-source) (unsafe-read f-target))))
